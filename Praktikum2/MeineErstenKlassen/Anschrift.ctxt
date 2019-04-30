@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Anschrift
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Anschrift.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=strasse\ hausnummer\ ort\ plz
+comment1.target=Anschrift(java.lang.String,\ int,\ java.lang.String,\ int)
+comment2.params=
+comment2.target=Anschrift()
+numComments=3

@@ -1,0 +1,81 @@
+public class Aufgabe2_Dekoration {
+
+	public static void main(String[] args) {
+
+		AufgabeA();
+		AufgabeB();
+		AufgabeC(1,5,2);
+		AufgabeD();
+	}
+	public static void AufgabeA(){
+		Interaktionsbrett brett = new Interaktionsbrett();
+		int count = 0;
+		int x = 10;
+		while(count < 10){
+			brett.neuesRechteck(x+=10, 10, 10, 10);
+			count++;
+		}
+	}
+	public static void AufgabeB() {
+		Interaktionsbrett brett = new Interaktionsbrett();
+		int count = 0;
+		int x = 10;
+		while(count <= 10) {
+			if(count%3 != 0) {
+				brett.neuesRechteck(x+=10, 10, 10, 10);
+			}else {
+				x+=10;
+			}
+			count ++;
+		}
+	}
+	public static void AufgabeC(int reihe, int spalte, int zoom) {
+		Nikolaushaus n = new Nikolaushaus();
+		int countX = 0;
+		int countY = 0;
+		int x = 10;
+		int y = 10;
+		while (countX < spalte) {
+			while (countY < reihe) {
+				n.zeichnen(x, y, zoom);
+				y+= 30;
+				countY++;
+			}
+			countY = 0;
+			y = 10;
+			x+= 15;
+			countX++;
+		}
+
+
+	}
+	public static void AufgabeD() {
+		Interaktionsbrett brett = new Interaktionsbrett();
+
+		ZurAufgabeD_Reihe(brett,10);
+		ZurAufgabeD_ReihemitLuecke(brett,20);
+		ZurAufgabeD_Reihe(brett,60);
+
+	}
+	public static void ZurAufgabeD_Reihe(Interaktionsbrett ib, int startYpos){
+		Interaktionsbrett brett = ib;
+		int count = 0;
+		int x = 10;
+		while(count < 6){
+			brett.neuesRechteck(x+=10, startYpos, 10, 10);
+			count++;
+		}
+	}
+	public static void 	ZurAufgabeD_ReihemitLuecke(Interaktionsbrett ib, int startYpos) {
+		Interaktionsbrett brett = ib;
+		int count = 0;
+		int x = 10;		
+		while (count < 4){
+			brett.neuesRechteck(x+10, startYpos, 10, 10);
+			brett.neuesRechteck(x+60, startYpos, 10, 10);
+			count++;
+			startYpos+=10;
+		}
+	}
+
+}

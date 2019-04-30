@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Dreieck
+comment1.params=ib
+comment1.target=void\ darstellung(Interaktionsbrett)
+comment1.text=private\ Punkt\ punkt1;\r\n\ \ \ \ private\ Punkt\ punkt2;\ \r\nprivate\ Punkt\ punkt3;
+numComments=2

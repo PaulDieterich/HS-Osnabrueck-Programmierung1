@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=GeoObjektSpielerrei
+comment1.params=kopf\ linkesAuge\ rechtesAuge\ nase\ munt
+comment1.target=GeoObjektSpielerrei(Kreis,\ Dreieck,\ Rechteck,\ Punkt,\ Linie)
+comment2.params=
+comment2.target=GeoObjektSpielerrei()
+comment3.params=
+comment3.target=void\ zeichnen()
+numComments=4

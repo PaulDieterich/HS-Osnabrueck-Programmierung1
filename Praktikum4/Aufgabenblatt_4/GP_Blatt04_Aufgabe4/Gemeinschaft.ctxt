@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=partner1\ partner2\ schliessung
+comment0.target=Gemeinschaft(Person,\ Person,\ Datum)
+comment1.params=
+comment1.target=Person\ getPartner1()
+comment2.params=partner1
+comment2.target=void\ setPartner1(Person)
+comment3.params=
+comment3.target=Person\ getPartner2()
+comment4.params=partner2
+comment4.target=void\ setPartner2(Person)
+comment5.params=
+comment5.target=Datum\ getSchliessung()
+comment6.params=schliessung
+comment6.target=void\ setSchliessung(Datum)
+numComments=7

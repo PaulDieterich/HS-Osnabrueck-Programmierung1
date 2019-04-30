@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Umzug
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Umzug.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=kunde\ auftrag
+comment1.target=Umzug(Kunde,\ Auftrag)
+comment2.params=
+comment2.target=Umzug()
+numComments=3

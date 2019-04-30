@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Rechteck
+comment1.params=punkt\ breite\ hoehe
+comment1.target=Rechteck(Punkt,\ int,\ int)
+comment2.params=
+comment2.target=int\ getBreite()
+comment3.params=newBreite
+comment3.target=void\ setBreite(int)
+comment4.params=
+comment4.target=int\ getHoehe()
+comment5.params=newHoehe
+comment5.target=void\ setHoehe(int)
+comment6.params=ib
+comment6.target=void\ darstellung(Interaktionsbrett)
+numComments=7

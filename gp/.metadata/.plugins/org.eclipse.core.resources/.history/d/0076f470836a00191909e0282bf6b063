@@ -1,0 +1,162 @@
+import java.util.ArrayList;
+
+
+public class Zahlenanalyse {
+
+	public  boolean istTeilerVon(Integer ersteZahl, Integer zweiteZahl) {
+		if(ersteZahl == null || ersteZahl == 0) {
+			return false;
+		}else if( zweiteZahl% ersteZahl == 0) {
+			return true;
+		}
+		return false;
+	}
+
+	public  ArrayList<Integer> alleTeilervon(Integer value) {
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		int check = 1;
+		if( value > 1) {
+			while (check <= value) {
+				if( value % check == 0) {
+					al.add(check);
+				}
+				check++;
+			}
+			return al;
+		}
+		return null;
+	}
+	public  Integer grossterGemeinsammerTeiler(Integer ersteZahl,Integer zweiteZahl) {
+		Integer ggT = null;
+				
+		if( !((ersteZahl == null) || (zweiteZahl == null)) &&(ersteZahl > 1 || zweiteZahl > 1)  ) {
+			for(int i = 1; i <= ersteZahl; i++) {
+				if(ersteZahl % i == 0 && zweiteZahl % i == 0) {
+					ggT = (Integer) i;
+				}
+			}
+			return ggT;
+		}
+		return null;
+		
+
+	}
+
+	public  Integer grossterGemeinsammerTeiler2(Integer ersteZahl,Integer zweiteZahl) {
+		Integer ggT = null;
+		Integer  rest = ersteZahl ;
+		Integer b = ersteZahl;
+		Integer a = zweiteZahl;
+		
+		while (rest > 0) {
+			rest = b %  a;
+		
+			if (rest == 0) {
+				return a;
+			}
+			b = a;
+			a = rest;
+			
+		
+		}
+		return ggT;
+	}
+	public  void eingabeanalyse() {
+		EinUndAusgabe io = new EinUndAusgabe();
+		boolean check = true;
+		double maximum = 0; 
+		double minimum = 0; 
+		double summe = 0;
+		int index = 0;
+		double schnitt;  
+		while (check) {
+			index++;
+			System.out.println("Geben Sei sein wert Ein: ");
+			double value = io.leseDouble();
+
+			if( value != -1) {
+				if( (value  < 100) && (value > -100)) {
+					if( maximum == 0 || value > maximum ) {
+						maximum = value;
+					}
+					if( minimum == 0 ||value < minimum) {
+						minimum = value;
+					}
+					summe += value; 
+					
+					schnitt = summe /index;
+					io.ausgeben("Maximum: " + maximum + " Minimum: " + minimum + " Schnitt: " + schnitt +"\n");
+				}
+			}else {
+				check = false;
+			}
+		}
+	}
+	public  void abzahlungZeigen() {
+		EinUndAusgabe io = new EinUndAusgabe();
+		io.ausgeben("Kreditsumme: ");
+		double kredit = io.leseDouble();
+		io.ausgeben("Zinssatz: ");
+		double zinssatz = io.leseDouble(); 
+		io.ausgeben("Tilgung: ");
+		double tildungssumme = io.leseDouble();
+		double komplettBezahlteZinsen = 0;
+
+		for(int i = 0; kredit >= 0; i++) {
+			double schonGezahlt = kredit*(zinssatz/100);
+			double imJahr = kredit*(1+zinssatz/100) - tildungssumme;
+			komplettBezahlteZinsen += schonGezahlt;
+			System.out.println(i +".Jahr Restkredit: " + imJahr  + ",  gezahlte Zinsen: " +komplettBezahlteZinsen );
+			kredit = imJahr;	
+		}
+	}
+	public void zahlenRaten() {
+		EinUndAusgabe io = new EinUndAusgabe();
+		int random = io.zufall(1, 100);
+		int guess = 0;
+		int counter = 1;
+		while (guess != random) {
+			io.ausgeben(counter +".Versuch: Zahl raten");
+			guess = io.leseInteger();
+			if(guess > random) {
+				System.out.println("zu hoch");
+			}else if(guess < random)  {
+				System.out.println("zu tief");
+			}else if(guess == random) {
+				System.out.println("Bravo, getroffen" );
+				guess = random;
+			}
+			counter++;
+		}
+
+	}
+	public void zahlenRatenMitPC() {
+		EinUndAusgabe io = new EinUndAusgabe();
+		boolean spielen = true;
+		int highGuess =50;
+		int lowGuess = 1;
+		int guess = 0;
+		int counter = 1;
+		System.out.println("SPIEL MIT MIR! NENNE MIR EINE ZAHL!");
+		while (spielen) {
+			
+			io.ausgeben(counter +".Versuch: Zahl raten");
+			guess = io.leseInteger();
+			
+			if(guess > highGuess ){
+				System.out.println("zuhoch");
+				highGuess = guess;
+			}
+			else {
+				System.out.println("Bravo, getroffen");
+				spielen = false;
+				
+			}
+			counter++;
+		}
+	}
+	
+}
+
+
+

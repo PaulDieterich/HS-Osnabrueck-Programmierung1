@@ -1,0 +1,10 @@
+INDEX VERSION 1.131+G:\SS2019_Programmierung 1\gp\.metadata\.plugins\org.eclipse.jdt.core
+2968249432.index
+3186934240.index
+1592100212.index
+819987999.index
+3317222136.index
+3050454647.index
+752578509.index
+3354186958.index
+2998925934.index

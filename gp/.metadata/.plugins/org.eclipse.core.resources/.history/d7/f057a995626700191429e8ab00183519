@@ -1,0 +1,27 @@
+
+public class Nikolaushaus {
+	Interaktionsbrett brett = new Interaktionsbrett();
+	Nikolaushaus(){
+
+	}
+
+	int x = 10;
+	int y = 10;
+	int p11 = 10;
+	int p12 = 10;
+	int p21 = 20;
+	int p22 = 20;
+	int dach = 5;
+	void zeichnen(int xPos, int yPos) {
+		brett.neuesRechteck(xPos, 10, 10, 10);
+		brett.neueLinie(p11, p12, p21, p22);
+		brett.neueLinie(p11, p12+10, p21, p22-10);
+		brett.neueLinie(p11, p12, p21, p22-10);
+		brett.neueLinie(p11, p12+10, p21, p22-10);
+	}
+
+
+	
+
+}
+

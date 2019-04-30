@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Kreis
+comment1.params=punkt\ radius
+comment1.target=Kreis(Punkt,\ int)
+comment2.params=
+comment2.target=int\ getRadius()
+comment3.params=newRadius
+comment3.target=void\ setRadius(int)
+comment4.params=ib
+comment4.target=void\ darstellung(Interaktionsbrett)
+numComments=5

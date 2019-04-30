@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Person
+comment1.params=kraft\ iq
+comment1.target=Person(int,\ int)
+comment2.params=kraft
+comment2.target=void\ setKraft(int)
+comment3.params=
+comment3.target=int\ getKraft()
+comment4.params=iq
+comment4.target=void\ setIq(int)
+comment5.params=
+comment5.target=int\ getIq()
+numComments=6

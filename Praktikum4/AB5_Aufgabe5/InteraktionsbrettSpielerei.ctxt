@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=InteraktionsbrettSpielerei
+comment1.params=
+comment1.target=void\ TextAusgabe()
+comment2.params=
+comment2.target=void\ bewegDich()
+comment3.params=name\ x\ y
+comment3.target=java.lang.Boolean\ mitMausAngeklickt(java.lang.String,\ int,\ int)
+comment4.params=name\ x\ y
+comment4.target=java.lang.Boolean\ mitMausVerschoben(java.lang.String,\ int,\ int)
+numComments=5

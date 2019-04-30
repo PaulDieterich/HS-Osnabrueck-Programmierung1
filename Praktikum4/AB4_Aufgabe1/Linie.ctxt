@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Linie
+comment1.params=p1\ p2
+comment1.target=Linie(Punkt,\ Punkt)
+comment2.params=ib
+comment2.target=void\ darstellung(Interaktionsbrett)
+numComments=3

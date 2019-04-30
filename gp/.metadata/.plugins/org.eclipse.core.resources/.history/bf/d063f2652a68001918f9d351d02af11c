@@ -1,0 +1,30 @@
+
+public class Aufgabe1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		quadrierenMitWhile(2);
+		quadrierenMitDoWhile(2);
+	}
+
+	public static void quadrierenMitWhile(double wert){
+
+		while (wert < 200000) {
+
+			double neuerWert = wert*wert;
+			System.out.println(neuerWert);
+
+			wert = neuerWert;
+		}
+
+	}
+	public static void quadrierenMitDoWhile(double wert){
+
+		do {
+			double neuerWert = wert*wert;
+			System.out.println(neuerWert);
+			wert = neuerWert;
+		}while (wert < 200000);
+
+	}
+}

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Kunde
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Kunde.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=kundenName\ anschrift
+comment1.target=Kunde(Name,\ Anschrift)
+comment2.params=
+comment2.target=Kunde()
+numComments=3

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Interaktionsbrett.java&apos; to &apos;ZeichenbrettMitFarbe/src&apos;&#x0D;&#x0A;- Original project: &apos;AB6_Aufgabe2&apos;&#x0D;&#x0A;- Destination element: &apos;ZeichenbrettMitFarbe/src&apos;&#x0D;&#x0A;- Original element: &apos;Interaktionsbrett.java&apos;" description="Copy compilation unit" destination="=ZeichenbrettMitFarbe/src" element1="/src&lt;{Interaktionsbrett.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1556640032980" units="1" version="1.0"/>
+</session>

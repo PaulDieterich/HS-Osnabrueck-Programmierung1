@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Leistung
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Leistung.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=nummer\ typ
+comment1.target=Leistung(int,\ java.lang.String)
+comment2.params=
+comment2.target=Leistung()
+numComments=3

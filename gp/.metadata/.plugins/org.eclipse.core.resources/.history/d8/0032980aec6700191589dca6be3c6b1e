@@ -1,0 +1,54 @@
+public class Aufgabe2_Dekoration {
+
+	public static void main(String[] args) {
+
+		AufgabeC();
+	}
+	public static void AufgabeA(){
+		Interaktionsbrett brett = new Interaktionsbrett();
+
+		int count = 0;
+		int x = 10;
+		while(count < 10){
+			System.out.println(count );
+			brett.neuesRechteck(x+=10, 10, 10, 10);
+			count++;
+		}
+	}
+	public static void AufgabeB() {
+		Interaktionsbrett brett = new Interaktionsbrett();
+		int count = 0;
+		int x = 10;
+		while(count <= 10) {
+			if(count%3 != 0) {
+				System.out.println(count );
+				brett.neuesRechteck(x+=10, 10, 10, 10);
+			}else {
+				x+=10;
+			}
+			count ++;
+		}
+	}
+	public static void AufgabeC() {
+		Nikolaushaus n = new Nikolaushaus();
+		int countX = 0;
+		int countY = 0;
+		int x = 10;
+		int y = 10;
+		while (countX < 125) {
+			while (countY < 32) {
+				n.zeichnen(x, y, 1);
+				y+= 30;
+				countY++;
+			}
+			countY = 0;
+			y =10;
+			x+= 15;
+			countX++;
+		}
+		
+		
+	}
+	
+
+}

@@ -1,0 +1,25 @@
+import java.lang.Math;
+
+public class Aufgabe1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		quadrierenMitWhile(5);
+	}
+
+	public static void quadrierenMitWhile(double wert){
+		
+		while (wert < 200) {
+			
+			double neuerWert = wert*wert;
+			System.out.println(neuerWert);
+			
+			wert = neuerWert;
+		}
+		
+		
+		
+		
+		
+	}
+}

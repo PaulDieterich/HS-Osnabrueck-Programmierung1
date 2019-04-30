@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Produkt
+comment1.params=name\ produktnummer\ preis
+comment1.target=Produkt(java.lang.String,\ java.lang.String,\ int)
+comment2.params=produktnummer\ preis\ name
+comment2.target=Produkt(java.lang.String,\ int,\ java.lang.String)
+comment3.params=preis\ produktnummer\ name
+comment3.target=Produkt(int,\ java.lang.String,\ java.lang.String)
+comment4.params=produktnummer\ preis
+comment4.target=Produkt(java.lang.String,\ int)
+comment5.params=preis\ produktnummer
+comment5.target=Produkt(int,\ java.lang.String)
+comment6.params=produktnummer
+comment6.target=Produkt(java.lang.String)
+comment7.params=preis
+comment7.target=Produkt(int)
+comment8.params=
+comment8.target=Produkt()
+numComments=9

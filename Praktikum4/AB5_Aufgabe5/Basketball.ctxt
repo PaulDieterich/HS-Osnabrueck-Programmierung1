@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Basketball
+comment1.params=
+comment1.target=void\ bewegDich()
+comment2.params=name\ x\ y
+comment2.target=java.lang.Boolean\ mitMausAngeklickt(java.lang.String,\ int,\ int)
+comment3.params=name\ x\ y
+comment3.target=java.lang.Boolean\ mitMausVerschoben(java.lang.String,\ int,\ int)
+comment4.params=name\ x\ y
+comment4.target=java.lang.Boolean\ mitMausLoslassen(java.lang.String,\ int,\ int)
+numComments=5
