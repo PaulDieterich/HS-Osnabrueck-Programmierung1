@@ -4,7 +4,7 @@ public class Aufgabe2_Dekoration {
 
 		AufgabeA();
 		AufgabeB();
-		AufgabeC(1,5,2);
+		AufgabeC(5,20,2);
 		AufgabeD();
 	}
 	public static void AufgabeA(){
