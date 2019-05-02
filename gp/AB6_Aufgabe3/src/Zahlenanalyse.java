@@ -101,10 +101,16 @@ public class Zahlenanalyse {
 		io.ausgeben("Tilgung: ");
 		double tildungssumme = io.leseDouble();
 		double komplettBezahlteZinsen = 0;
-
+		
+		
+		
 		for(int i = 0; kredit >= 0; i++) {
 			double schonGezahlt = kredit*(zinssatz/100);
 			double imJahr = kredit*(1+zinssatz/100) - tildungssumme;
+			if(imJahr > kredit) {
+				System.out.println("Kredit kann nicht abgezahlt werden!");
+				break;
+			}
 			komplettBezahlteZinsen += schonGezahlt;
 			System.out.println(i +".Jahr Restkredit: " + imJahr  + ",  gezahlte Zinsen: " +komplettBezahlteZinsen );
 			kredit = imJahr;	
