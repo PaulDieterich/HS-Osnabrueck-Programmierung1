@@ -12,10 +12,11 @@ public class testClass {
 		
 //		einefuegenVor(0,new Punkt(80, 1));
 //		darstellen(new Interaktionsbrett());
-		Polygonzug poly = new Polygonzug(new Interaktionsbrett(), new ArrayList<>());
+		Polygonzug poly = new Polygonzug();
 		poly.anfuegen(new Punkt(5, 2));
 		poly.anfuegen(new Punkt(80, 49));
 		poly.anfuegen(new Punkt(74, 95));
+		
 		poly.dialog();
 		
 	}

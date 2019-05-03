@@ -1,34 +1,47 @@
 import java.util.ArrayList;
 
-public class Polygonzug  {
+public class Polygonzug extends Exception  {
 
 	private Interaktionsbrett brett;
 	private ArrayList<Punkt> PunktList;
 	private static boolean geschlossen = false;
 	static EinUndAusgabe io = new EinUndAusgabe();
 
-	public  Polygonzug(Interaktionsbrett ib, ArrayList<Punkt> al ){
-		brett = ib;
-		PunktList = al;
+	public Polygonzug(){
+		brett = new Interaktionsbrett();
+		PunktList = new ArrayList<>();
 	}
 	public void anfuegen(Punkt p) {
-		PunktList.add(p);
-	}
-	public  void darstellen(Interaktionsbrett ib) {
-		brett = ib;
-		for(int i = 1 ; i < PunktList.size(); ++i) {
-			int p1x = PunktList.get(i-1).getX();
-			int p1y = PunktList.get(i-1).getY();
-			int p2x = PunktList.get(i).getX();
-			int p2y = PunktList.get(i).getY();
-			brett.neueLinie(p1x, p1y,p2x,p2y);
-		}		
-		if(PunktList.get(0) == PunktList.get(PunktList.size() -1)) {
-			geschlossen = true;
+	try {
+			PunktList.add(p);
+		}catch(Exception e) {
+			e.getMessage();
 		}
 	}
+	public  void darstellen() {
+		try {
+			for(int i = 1 ; i < PunktList.size(); ++i) {
+				int p1x = PunktList.get(i-1).getX();
+				int p1y = PunktList.get(i-1).getY();
+				int p2x = PunktList.get(i).getX();
+				int p2y = PunktList.get(i).getY();
+				this.brett.neueLinie(p1x, p1y,p2x,p2y);
+			}		
+			if(PunktList.get(0) == PunktList.get(PunktList.size() -1)) {
+				geschlossen = true;
+			}
+		}catch (Exception e) {
+			e.getMessage();
+		}
+		
+	}
 	public  void einefuegenVor(int position, Punkt p) {
-		PunktList.add(position, p);	
+		try {
+			PunktList.add(position, p);	
+		} catch (Exception e) {
+			System.out.println("Position auserhalb der Listes");
+			e.getMessage();
+		}
 	}
 	public boolean getGeschlossen() {
 		if(PunktList.get(0) == PunktList.get(PunktList.size()-1)) {
@@ -38,17 +51,24 @@ public class Polygonzug  {
 		return false;
 	}
 	public  void loeschenAn(int position) {
-		PunktList.remove(position);
+		try {
+			PunktList.remove(position);
+		} catch (Exception e) {
+			System.out.println("Position auserhalb der Listes");
+			e.getMessage();
+		}
 	}
 	public  void punktBearbeitenAn(int position, Punkt p) {
 		PunktList.remove(position);
 		PunktList.add(position-1, p);
 	}
 	public  void setGeschossen(boolean b) {
-		if(!b) {
-			PunktList.add(PunktList.get(0));
-		}else {
-			PunktList.remove(PunktList.get(PunktList.size()-1));
+		if(!(PunktList == null && PunktList.size() == 0)) {
+			if(!b) {
+				PunktList.add(PunktList.get(0));
+			}else {
+				PunktList.remove(PunktList.get(PunktList.size()-1));
+			}
 		}
 	}
 	@Override
@@ -77,7 +97,8 @@ public class Polygonzug  {
 		System.out.println("------------------------Willkommen zum Polygonzug zeichenbrett -----------------------------");
 		System.out.println("--------------------------------------------------------------------------------------------");
 		while (go) {
-
+			this.brett.abwischen();
+			darstellen();
 			System.out.println("(0) Programm beenden");
 			System.out.println("(1) Punkt am Ende hinzufuegen");
 			System.out.println("(2) Punkt vor einer Position hinzufuegen");
@@ -86,7 +107,7 @@ public class Polygonzug  {
 			System.out.println("(5) Polyginzug oeffnen/schliessen");
 			System.out.println("(6) Polygonzug ausgeben");
 			Integer input = io.leseInteger();
-			if(  input instanceof Integer) {
+			if( input > 0) {
 
 				switch(input) {
 				case 0: 
@@ -95,31 +116,24 @@ public class Polygonzug  {
 				case 1:
 					// "(1) Punkt am Ende hinzufuegen"
 					anfuegen(new Punkt(xEingabe(),yEingabe()));
-					darstellen(new Interaktionsbrett());
 					break;
 				case 2:
 					// "(2) Punkt vor einer Position hinzufuegen"
 					io.ausgeben("Geben sie eine Position an");
 					int pos = io.leseInteger();
-					einefuegenVor(pos, new Punkt(xEingabe(), yEingabe()));
-					brett.abwischen();
-					darstellen(brett);
+					einefuegenVor(pos, new Punkt(xEingabe(), yEingabe()));				
 					break;
 				case 3:
 					// "(3) Punkt an Position loeschen"
 					io.ausgeben("Geben sie an wleche Position gelöscht werden soll");
 					int p = io.leseInteger();
 					loeschenAn(p);
-					brett.abwischen();
-					darstellen(brett);
 					break;
 				case 4:
 					// "(4) Korrdinaten eines Punktes bearbeiten"
 					io.ausgeben("Geben sie eine Position an");
 					int pos4 = io.leseInteger();
 					punktBearbeitenAn(pos4,new Punkt(xEingabe(), yEingabe()));
-					brett.abwischen();
-					darstellen(brett);
 					break;
 				case 5:
 					// "(5) Polyginzug oeffnen/schliessen"
@@ -127,8 +141,10 @@ public class Polygonzug  {
 					String eingabe = io.leseString();
 					if(eingabe.equals("o")) {
 						setGeschossen(true);
+						
 					}else if(eingabe.equals("s")) {
 						setGeschossen(false);
+						
 					}else {
 						System.out.println("Bitte geben sie nur \"o\" oder \"s\" ein. Bitte beachten sie groß und kleinschreibung");
 					}
@@ -140,7 +156,10 @@ public class Polygonzug  {
 					break;
 				default:
 					System.out.println( "Geben sie bitte eine der angezeigten zahlen ein!");
+					
 				}
+			}else {
+				System.out.println("Bitte geben sie nur Ganzzahlen ein");
 			}
 		}
 	}
