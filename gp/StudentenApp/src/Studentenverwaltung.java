@@ -19,7 +19,7 @@ public class Studentenverwaltung {
 	public String getStudenten() {
 		String outPut = " ";
 		for(Student studi : studenten){
-			outPut = studi.toString();
+			outPut = outPut + "[" + studi.toString() + "] "; 
 		}
 		return outPut;
 	}

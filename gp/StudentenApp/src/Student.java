@@ -40,7 +40,7 @@ public class Student {
 	}
 	@Override
 	public String toString() {
-			return "vorName: " + this.vorName + " nachName: " + this.nachName + " Studiengang: " + this.studiengang; 
+			return "Vorname: " + this.vorName + " Nachname: " + this.nachName + " Studiengang: " + this.studiengang; 
 	}
 	
 	
