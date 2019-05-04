@@ -3,33 +3,34 @@ import java.util.ArrayList;
 public class Polygonzug extends Exception  {
 
 	private Interaktionsbrett brett;
-	private ArrayList<Punkt> PunktList;
+	private ArrayList<Punkt> punkteList;
 	private static boolean geschlossen = false;
 	static EinUndAusgabe io = new EinUndAusgabe();
 
 	public Polygonzug(){
 		brett = new Interaktionsbrett();
-		PunktList = new ArrayList<>();
+		punkteList = new ArrayList<>();
 	}
 	public void anfuegen(Punkt p) {
 	try {
-			PunktList.add(p);
+			punkteList.add(p);
 		}catch(Exception e) {
 			e.getMessage();
 		}
 	}
 	public  void darstellen() {
 		try {
-			for(int i = 1 ; i < PunktList.size(); ++i) {
-				int p1x = PunktList.get(i-1).getX();
-				int p1y = PunktList.get(i-1).getY();
-				int p2x = PunktList.get(i).getX();
-				int p2y = PunktList.get(i).getY();
+			for(int i = 1 ; i < punkteList.size(); ++i) {
+				int p1x = punkteList.get(i-1).getX();
+				int p1y = punkteList.get(i-1).getY();
+				int p2x = punkteList.get(i).getX();
+				int p2y = punkteList.get(i).getY();
 				this.brett.neueLinie(p1x, p1y,p2x,p2y);
-			}		
-			if(PunktList.get(0) == PunktList.get(PunktList.size() -1)) {
-				geschlossen = true;
 			}
+			getGeschlossen();     	        //			if(PunktList.get(0) == PunktList.get(PunktList.size() -1)) {
+											//				geschlossen = true;
+											//			}
+
 		}catch (Exception e) {
 			e.getMessage();
 		}
@@ -37,14 +38,14 @@ public class Polygonzug extends Exception  {
 	}
 	public  void einefuegenVor(int position, Punkt p) {
 		try {
-			PunktList.add(position, p);	
+			punkteList.add(position, p);	
 		} catch (Exception e) {
 			System.out.println("Position auserhalb der Listes");
 			e.getMessage();
 		}
 	}
 	public boolean getGeschlossen() {
-		if(PunktList.get(0) == PunktList.get(PunktList.size()-1)) {
+		if(punkteList.get(0) == punkteList.get(punkteList.size()-1)) {
 			geschlossen = true;
 		}
 		geschlossen = false;
@@ -52,30 +53,30 @@ public class Polygonzug extends Exception  {
 	}
 	public  void loeschenAn(int position) {
 		try {
-			PunktList.remove(position);
+			punkteList.remove(position);
 		} catch (Exception e) {
 			System.out.println("Position auserhalb der Listes");
 			e.getMessage();
 		}
 	}
 	public  void punktBearbeitenAn(int position, Punkt p) {
-		PunktList.remove(position);
-		PunktList.add(position-1, p);
+		punkteList.remove(position);
+		punkteList.add(position-1, p);
 	}
 	public  void setGeschossen(boolean b) {
-		if(!(PunktList == null && PunktList.size() == 0)) {
+		if(!(punkteList == null && punkteList.size() == 0)) {
 			if(!b) {
-				PunktList.add(PunktList.get(0));
+				punkteList.add(punkteList.get(0));
 			}else {
-				PunktList.remove(PunktList.get(PunktList.size()-1));
+				punkteList.remove(punkteList.get(punkteList.size()-1));
 			}
 		}
 	}
 	@Override
 	public String toString() {
 		String outPut = " ";
-		for(int i = 0; i < PunktList.size(); ++i) {
-			outPut = outPut.concat("(x"+i+": " +PunktList.get(i).getX() + " - " + "y"+i+": " + PunktList.get(i).getY() + ")");
+		for(int i = 0; i < punkteList.size(); ++i) {
+			outPut = outPut.concat("(x"+i+": " +punkteList.get(i).getX() + " - " + "y"+i+": " + punkteList.get(i).getY() + ")");
 		}
 		return outPut;
 	}
@@ -151,7 +152,7 @@ public class Polygonzug extends Exception  {
 
 					break;
 				case 6:
-					System.out.println(PunktList.toString());
+					System.out.println(punkteList.toString());
 					// "(6) Polygonzug ausgeben"
 					break;
 				default:
