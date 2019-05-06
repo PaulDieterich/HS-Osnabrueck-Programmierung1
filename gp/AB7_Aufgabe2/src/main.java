@@ -12,8 +12,8 @@ public class main {
 		m.hinzufuegen(2);
 		
 		System.out.println(m.toString());
-		System.out.println(m.min());
-		System.out.println(m.druchschnitt());
+		System.out.println("Minimum ist: " + m.min());
+		System.out.println("Durchschnitt liegt bei: " + m.druchschnitt());
 		m.anzahkZwischen(2,4);
 	}
 }

@@ -47,7 +47,7 @@ public   class Messreihe {
 		for(int i = min; i <= max; i++) {
 			anzahl++;
 		}
-		System.out.println( "min=" + min + " max=" + max + " Dazwischen liegen " + anzahl );
+		System.out.println( "min=" + min + " max=" + max + " Dazwischen liegen " + anzahl + " werte.");
 	}
 	@Override
 	public String toString() {
@@ -55,7 +55,7 @@ public   class Messreihe {
 		for(Integer messwert : messwerte) {
 			output += " " + messwert;
 		}
-		return "Am Messort " + messort + " sind die folgenenen werte gemessen worden: " + output + " ]";
+		return "Am Messort " + messort + " sind die folgenenen werte gemessen worden: " + output + " ].";
 	}
 
 
