@@ -213,7 +213,15 @@ public class Interaktionsbrett {
     new Thread(uhrThread).start();
 
   }
-
+  /** setZoom
+   * @return Zoom stufe
+   * 
+   * */
+  public void setZoom(double newZoom) {
+	  this.zoom = newZoom;
+  }
+  
+  
   /** Methode zum Starten der eingeblendeten Stoppuhr. */
   public void starteUhr() {
     uhrThread.starteUhr();

@@ -9,6 +9,7 @@ public class Polygonzug extends Exception  {
 
 	public Polygonzug(){
 		brett = new Interaktionsbrett();
+		brett.setZoom(5);
 		punkteList = new ArrayList<>();
 	}
 	public void anfuegen(Punkt p) {
@@ -27,10 +28,8 @@ public class Polygonzug extends Exception  {
 				int p2y = punkteList.get(i).getY();
 				this.brett.neueLinie(p1x, p1y,p2x,p2y);
 			}
-			getGeschlossen();     	        //			if(PunktList.get(0) == PunktList.get(PunktList.size() -1)) {
-											//				geschlossen = true;
-											//			}
-
+			getGeschlossen();
+			System.out.println(getGeschlossen());
 		}catch (Exception e) {
 			e.getMessage();
 		}
@@ -40,22 +39,33 @@ public class Polygonzug extends Exception  {
 		try {
 			punkteList.add(position, p);	
 		} catch (Exception e) {
-			System.out.println("Position auserhalb der Listes");
+			System.out.println("Position ausserhalb der Listes");
 			e.getMessage();
 		}
 	}
 	public boolean getGeschlossen() {
 		if(punkteList.get(0) == punkteList.get(punkteList.size()-1)) {
 			geschlossen = true;
+		}else {
+			geschlossen = false;
 		}
-		geschlossen = false;
-		return false;
+		
+		return geschlossen;
 	}
 	public  void loeschenAn(int position) {
 		try {
+			boolean geschl = getGeschlossen();
 			punkteList.remove(position);
+			if(geschl && position == 0) {
+				System.out.println("test");
+				punkteList.remove(punkteList.size()-1);
+				setGeschossen(true);
+				
+			}
+			
+			
 		} catch (Exception e) {
-			System.out.println("Position auserhalb der Listes");
+			System.out.println("Position ausserhalb der Listes");
 			e.getMessage();
 		}
 	}
@@ -65,10 +75,12 @@ public class Polygonzug extends Exception  {
 	}
 	public  void setGeschossen(boolean b) {
 		if(!(punkteList == null && punkteList.size() == 0)) {
-			if(!b) {
-				punkteList.add(punkteList.get(0));
+			if(b) {
+				punkteList.remove(punkteList.get(0));
+				einefuegenVor(punkteList.size()-1, punkteList.get(0));
+				
 			}else {
-				punkteList.remove(punkteList.get(punkteList.size()-1));
+				punkteList.add(punkteList.get(0));
 			}
 		}
 	}
@@ -138,16 +150,21 @@ public class Polygonzug extends Exception  {
 					break;
 				case 5:
 					// "(5) Polyginzug oeffnen/schliessen"
-					io.ausgeben("(o = oeffen / s = schliessen) bitte w‰hlen sie!");
-					String eingabe = io.leseString();
-					if(eingabe.equals("o")) {
+//					io.ausgeben("(o = oeffen / s = schliessen) bitte w‰hlen sie!");
+//					String eingabe = io.leseString();
+//					if(eingabe.equals("o")) {
+//						setGeschossen(true);
+//						
+//					}else if(eingabe.equals("s")) {
+//						setGeschossen(false);
+//						
+//					}else {
+//						System.out.println("Bitte geben sie nur \"o\" oder \"s\" ein. Bitte beachten sie groﬂ und kleinschreibung");
+//					}
+					if(geschlossen) {
 						setGeschossen(true);
-						
-					}else if(eingabe.equals("s")) {
-						setGeschossen(false);
-						
 					}else {
-						System.out.println("Bitte geben sie nur \"o\" oder \"s\" ein. Bitte beachten sie groﬂ und kleinschreibung");
+						setGeschossen(false);
 					}
 
 					break;
