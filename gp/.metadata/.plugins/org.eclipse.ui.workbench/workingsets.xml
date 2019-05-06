@@ -6,23 +6,6 @@
 <item elementID="=AB5_Aufgabe4/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1554985023464_1" label="Java Test Sources" name="Java Test Sources"/>
-<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1556259858046_5" label="AB5" name="AB5">
-<item elementID="=AB5_Aufgabe1" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=AB5_Aufgabe2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=AB5_Aufgabe4" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=AB5_Aufgabe5" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-</workingSet>
-<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1556858769163_4" label="Java Main Sources" name="main">
-<item elementID="=AB5_Aufgabe1/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=AB5_Aufgabe2/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=AB5_Aufgabe4/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=AB5_Aufgabe5/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=AB6_Aufgabe1/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=AB6_Aufgabe2/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=AB6_Aufgabe3/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=AB7_Aufgabe1/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=AB7_Aufgabe2/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-</workingSet>
-<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1556858769169_5" label="Java Test Sources" name="test"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1556259858046_5" label="AB5" name="AB5"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1554985030220_2" label="Window Working Set" name="Aggregate for window 1554985030220"/>
 </workingSetManager>
